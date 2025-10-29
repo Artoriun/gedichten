@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Navigation.css'
 
@@ -9,6 +9,7 @@ interface MenuItem {
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
 
   const menuItems: MenuItem[] = [
     { label: 'Home', href: '#hero' },
@@ -17,6 +18,23 @@ const Navigation = () => {
     { label: 'FAQ', href: '#faq' },
     { label: 'Contact', href: '#contact' }
   ]
+
+  // Handle clicking outside the menu to close it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
 
   const handleMenuItemClick = (href: string) => {
     const element = document.querySelector(href)
@@ -37,7 +55,7 @@ const Navigation = () => {
     <nav className="navigation">
       <div className="nav-container">
         {/* Combined Button Container with Separate Contact and Menu */}
-        <div className="menu-container">
+        <div className="menu-container" ref={menuRef}>
           <div className="combined-button-container">
             {/* Contact Icon Button */}
             <button 
