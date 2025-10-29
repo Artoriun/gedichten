@@ -51,18 +51,7 @@
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
 }
 
-.for-sale {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: #2d5a27;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  z-index: 2;
-}
+
 
 .artwork-image {
   width: 100%;
@@ -103,7 +92,27 @@
 .artwork-category {
   font-size: 0.9rem;
   color: #666;
-  margin: 0;
+  margin: 0 0 15px 0;
+}
+
+.read-poem-btn {
+  background: #2d5a27;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.read-poem-btn:hover {
+  background: #1e3f1a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(45, 90, 39, 0.3);
 }
 
 .view-all-btn {

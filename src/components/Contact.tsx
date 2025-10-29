@@ -28,7 +28,7 @@ const Contact = () => {
             variants={fadeInVariants}
             viewport={{ once: true }}
           >
-            Only your imagination limits you
+            "A szó örök, mint a lélek maga" - Words are eternal, like the soul itself
           </motion.h2>
           
           <motion.div 
@@ -46,7 +46,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <a href="mailto:kovacs@poetry.hu" className="contact-btn">
-              Explore Collection
+              Discover Hungarian Verses
             </a>
           </motion.div>
 
@@ -91,9 +91,9 @@ const Contact = () => {
             }}
             viewport={{ once: true }}
           >
-            <div className="copyright">© 2025 Hungarian Poetry Archive</div>
+            <div className="copyright">© 2025 Kovács Poetry Collection • Magyar Költészeti Archívum</div>
             <div className="template-credit">
-              Digital preservation by <a href="#" className="credit-link">Literary Heritage Foundation</a>
+              Preserving the voices of <a href="#" className="credit-link">Hungarian Literary Heritage</a>
             </div>
           </motion.footer>
         </div>

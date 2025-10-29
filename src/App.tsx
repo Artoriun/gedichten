@@ -1,6 +1,5 @@
 import Hero from './components/Hero'
 import About from './components/About'
-import Events from './components/Events'
 import Testimonial from './components/Testimonial'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
@@ -11,7 +10,6 @@ function App() {
     <div className="app">
       <Hero />
       <About />
-      <Events />
       <Testimonial />
       <FAQ />
       <Contact />

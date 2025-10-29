@@ -6,26 +6,22 @@ const Hero = () => {
     {
       title: "Őszi Álmok",
       category: "Autumn Dreams Collection",
-      forSale: true,
       image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
     },
     {
       title: "Budapest Éjszaka",
       category: "Urban Verses", 
-      forSale: false,
       image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
     },
     {
       title: "Szerelem Szavai",
       category: "Love Poetry Series",
-      forSale: true,
       image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
     },
     {
       title: "Múlt Emlékei", 
       category: "Historical Reflections",
-      forSale: true,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
     }
   ]
 
@@ -82,7 +78,6 @@ const Hero = () => {
               whileHover={{ scale: 1.05, y: -10 }}
               transition={{ duration: 0.3 }}
             >
-              {artwork.forSale && <span className="for-sale">$ For sale</span>}
               <div className="artwork-image">
                 <img src={artwork.image} alt={artwork.title} />
               </div>
@@ -90,6 +85,7 @@ const Hero = () => {
                 <span className="artwork-type">Published poem</span>
                 <h3 className="artwork-title">{artwork.title}</h3>
                 <p className="artwork-category">{artwork.category}</p>
+                <button className="read-poem-btn">Read Poem</button>
               </div>
             </motion.div>
           ))}

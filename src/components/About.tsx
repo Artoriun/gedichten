@@ -118,7 +118,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=616&h=900&fit=crop" 
+              src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=616&h=900&fit=crop" 
               alt="Stack of vintage poetry books with quill pen"
             />
           </motion.div>
