@@ -3,6 +3,7 @@ import About from './components/About'
 import Testimonial from './components/Testimonial'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
       <Testimonial />
       <FAQ />
       <Contact />
+      <Footer />
     </div>
   )
 }

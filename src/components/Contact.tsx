@@ -78,24 +78,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.footer 
-            className="footer"
-            initial="hidden"
-            whileInView="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { 
-                opacity: 1,
-                transition: { duration: 0.6, delay: 0.6 }
-              }
-            }}
-            viewport={{ once: true }}
-          >
-            <div className="copyright">© 2025 Kovács Poetry Collection • Magyar Költészeti Archívum</div>
-            <div className="template-credit">
-              Preserving the voices of <a href="#" className="credit-link">Hungarian Literary Heritage</a>
-            </div>
-          </motion.footer>
         </div>
 
         <motion.div 
@@ -130,6 +112,8 @@ const Contact = () => {
             />
           </div>
         </motion.div>
+
+
       </div>
     </section>
   )
